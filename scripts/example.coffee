@@ -32,11 +32,11 @@ module.exports = (robot) ->
   #   msg.send "#{msg.message.text}? That's a Paddlin'"
   #
   #
-  # enterReplies = ['Hi', 'Target Acquired', 'Firing', 'Hello friend.', 'Gotcha', 'I see you']
+  enterReplies = ['あら、@#{msg.message.user.name}', '来たね。', '@#{msg.message.user.name} 元気？', '暇なの？', 'それな。']
   # leaveReplies = ['Are you still there?', 'Target lost', 'Searching']
   #
-  # robot.enter (msg) ->
-  #   msg.send msg.random enterReplies
+  robot.enter (msg) ->
+    msg.send msg.random enterReplies
   # robot.leave (msg) ->
   #   msg.send msg.random leaveReplies
   #
