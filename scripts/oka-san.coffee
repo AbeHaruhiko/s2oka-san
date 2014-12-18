@@ -9,6 +9,6 @@ module.exports = (robot) ->
 
   robot.hear /帰/i, (msg) ->
     msg.send msg.random [
-      "おつかれさま"
+      "おつかれさま、@#{msg.message.user.name}"
     ]
 
