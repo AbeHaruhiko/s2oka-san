@@ -1,6 +1,9 @@
 cron = require('cron').CronJob
-
 module.exports = (robot) ->
-  new cron '0 49 22 * * 1-5', () =>
-    robot.send {room: "#general"}, "てす"
-  , null, true, "Asia/Tokyo"
+  robot.enter ->
+  new cron
+    cronTime: "0 56 22 * * *"
+    start: true
+    timeZone: "Asia/Tokyo"
+    onTick: ->
+      robot.send {room: "#general"}, "朝会の時間です。"
