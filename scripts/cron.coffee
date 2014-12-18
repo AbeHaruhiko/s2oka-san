@@ -1,6 +1,5 @@
 cron = require('cron').CronJob
 module.exports = (robot) ->
-  robot.enter ->
   new cron
     cronTime: "15 * * * * *"
     start: true
