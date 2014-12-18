@@ -12,3 +12,10 @@ module.exports = (robot) ->
       "おつかれさま、@#{msg.message.user.name}"
     ]
 
+  robot.hear /おは/i, (msg) ->
+    msg.send msg.random [
+      "おはよう、@#{msg.message.user.name}",
+      "おはよう、@#{msg.message.user.name}、よく寝た？",
+      "間に合うの？",
+    ]
+
